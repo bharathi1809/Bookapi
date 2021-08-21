@@ -19,7 +19,7 @@ Parameter       none
 method          GET
 */
 
-bookStore.get("/",(req, res) =>{
+bookStore.get("/books",(req, res) =>{
     return res.json({books: dataBase.books});
 });
 
@@ -89,6 +89,38 @@ bookStore.get("/a/:author", (req,res) =>{
     }
 
     return res.json({book:getSpecificBooks}); 
-})
+});
+
+/*
+Route           /
+description     get all authors
+Access          public
+Parameter       author
+method          GET
+*/
+
+bookStore.get("/author",(req, res) => {
+    return res.json({authors: dataBase.authors});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 bookStore.listen(3000,() => console.log("server started!!!"));
