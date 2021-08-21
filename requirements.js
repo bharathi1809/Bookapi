@@ -28,13 +28,13 @@
 // POST
 // New Book 
 
-// PUT
+// PUT 
 // Update book details
 // update/add new author
 
 // DELETE
 // delete a book
-// delete a author from a book
+// delete a author from a book   
 
 // ---------------------------------------------------------------------------------------
 
