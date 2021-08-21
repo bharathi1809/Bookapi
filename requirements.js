@@ -23,7 +23,7 @@
 // to get all books ✅ 
 // to get specific book ✅ 
 // to get a list of books based on category ✅ 
-// to get a list of books based on author -> [Task]
+// to get a list of books based on author ✅ 
 
 // POST
 // New Book 
@@ -43,9 +43,9 @@
 // We need an API
 
 // GET
-// to get all authors
-// to get specific author [Task]
-// to get a list of authors based on a book. 
+// to get all authors ✅ 
+// to get specific author ✅ 
+// to get a list of authors based on a book.✅  
 
 // POST
 // New Author 
