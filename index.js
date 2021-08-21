@@ -100,7 +100,7 @@ method          GET
 */
 
 bookStore.get("/author",(req, res) => {
-    return res.json({authors: dataBase.authors});
+    return res.json({author: dataBase.authors});
 });
 
 
