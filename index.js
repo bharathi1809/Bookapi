@@ -78,7 +78,7 @@ method          GET
 
 bookStore.get("/a/:author", (req,res) =>{
     const getSpecificBooks = dataBase.books.filter(
-    (book) => book.authors.includes(parseInt(req.params.authors))
+    (book) => book.authors.includes(parseInt(req.params.author))
         
     );
 
