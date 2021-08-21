@@ -63,9 +63,9 @@
 // We need an API
 
 // GET
-// to get all publications 
-// to get specific publication [Task]
-// to get a list of publications based on a book. [Task]
+// to get all publications ✅ 
+// to get specific publication ✅ 
+// to get a list of publications based on a book. ✅ 
 
 // POST
 // Add new publication [task] 
