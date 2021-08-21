@@ -209,14 +209,34 @@ bookStore.get("/publications/pub/:book", (req, res) =>{
 });
 
 
+/*
+Route           book/new
+description     add new books
+Access          public
+Parameter       none
+method          POST
+*/
+
+bookStore.post("/book/new",(req,res)=>{
+    const{ newBook }  = req.body;
+    dataBase.books.push(newBook);
+    return res.json({ books: dataBase.books, message: "Book was added!!"})
+});
 
 
+/*
+Route           author/new
+description     add new author
+Access          public
+Parameter       none
+method          POST
+*/
 
-
-
-
-
-
+bookStore.post("/author/new",(req,res)=>{
+    const{ newAuthor }  = req.body;
+    dataBase.authors.push(newAuthor);
+    return res.json({ authors: dataBase.authors, message: "Author was added!!"})
+});
 
 
 

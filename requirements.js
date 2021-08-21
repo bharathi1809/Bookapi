@@ -26,7 +26,7 @@
 // to get a list of books based on author ✅ 
 
 // POST
-// New Book 
+// New Book ✅ 
 
 // PUT 
 // Update book details
@@ -48,7 +48,7 @@
 // to get a list of authors based on a book.✅  
 
 // POST
-// New Author 
+// New Author ✅ 
 
 // PUT
 // update Author name using id [Task] 
