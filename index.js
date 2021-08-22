@@ -239,14 +239,64 @@ bookStore.post("/author/new",(req,res)=>{
 });
 
 
+/*
+Route           /publications/new
+description     add new Publications
+Access          public
+Parameter       none
+method          POST
+*/
+
+bookStore.post("/publications/new",(req,res)=>{
+    const{ newPublication }  = req.body;
+    dataBase.publications.push(newPublication);
+    return res.json({ publications: dataBase.publications, message: "publication was added!!"})
+});
+
+/*
+Route           /book/update
+description     update title of book
+Access          public
+Parameter       title
+method          PUT
+*/
+
+bookStore.put("/book/update/:isbn", (req ,res) =>{
+    dataBase.books.forEach((book) =>{
+        if (book.ISBN == req.params.isbn){
+         book.title = req.body.bookTitle;
+         return;
+        }
+    });
+    return res.json( {books:dataBase.books})
+});
 
 
-
-
-
-
-
-
+/*
+Route           /book/update/author
+Description     update/add new author for a book
+Access          PUBLIC
+Parameter       isbn
+Methods         PUT
+*/
+bookStore.put("/book/update/author/:isbn", (req, res) => {
+    // update book database
+  
+    dataBase.books.forEach((book) => {
+      if (book.ISBN === req.params.isbn) {
+        return book.authors.push(req.body.newAuthor);
+      }
+    });
+  
+    // update author database
+  
+    dataBase.authors.forEach((author) => {
+      if (author.id === req.params.newAuthor)
+        return author.books.push(req.params.isbn);
+    });
+  
+    return res.json({ books: dataBase.books, author: dataBase.authors });
+  });
 
 
 

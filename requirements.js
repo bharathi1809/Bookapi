@@ -68,7 +68,7 @@
 // to get a list of publications based on a book. ✅ 
 
 // POST
-// Add new publication [task] 
+// Add new publication ✅
 
 // PUT
 // update publication name using id [Task] 
