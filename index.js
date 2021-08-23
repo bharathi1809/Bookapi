@@ -1,5 +1,7 @@
 // Framework
+require("dotenv").config();
 const express = require("express");
+const mongoose = require("mongoose")
 
 //initializing express
 const bookStore = express();
@@ -9,6 +11,14 @@ const dataBase = require("./DataBase/index");
 
 //configuration
 bookStore.use(express.json());
+
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+  })
+  .then(() => console.log("Connection is established !!!"));
 
 
 /*
