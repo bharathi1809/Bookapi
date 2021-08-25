@@ -1,4 +1,4 @@
-/Prefix : /book
+//Prefix : /book
 
 //Initializing express router
 const Router = require("express").Router();
